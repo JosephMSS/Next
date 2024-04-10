@@ -1,0 +1,10 @@
+.nav-border {
+    border-top: .1rem solid #e1e1e1
+}
+
+.nav-container {
+    align-items: center;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+}
