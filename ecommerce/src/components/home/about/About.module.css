@@ -1,0 +1,23 @@
+.about {
+    background-image: linear-gradient(to right, transparent 50%, #037bc0 50%, #037bc0 100%), url('/img/nosotros.jpg');
+    background-repeat: no-repeat;
+    background-size: cover, 120rem;
+    background-position: left center;
+    padding: 10rem 0;
+    width: auto;
+    height: auto;
+}
+
+.about--container {
+    max-width: 230rem;
+    /* para centrar hay dos formas 
+        margin: 0 auto;
+        o la nueva
+        */
+    margin-inline: auto;
+
+}
+.about--text{
+    flex-basis: 50%;
+    padding-left: 10rem;
+}

@@ -2,10 +2,12 @@ import { Hero } from "app/components/shared/Hero/Hero.component";
 import { Container } from "app/components/shared/container/Container";
 import Image from "next/image";
 import { Container as CategoryContainer } from "app/components/home/category/container"
+import { Container as AboutContainer } from "app/components/home/about"
 import { Card as CategoryCard } from "app/components/home/category/card"
 import { Typography } from "app/components/shared/Typography";
 import { PRODUCTS } from "app/data/products.data";
 import { CATEGORIES } from "app/data/catergories.data";
+import aboutStyles from "app/components/home/about/About.module.css";
 export default function Home() {
   return (
     <>
@@ -22,15 +24,19 @@ export default function Home() {
           </CategoryContainer>
         </Container>
       </section>
-      <section>
-        <Typography.H2 className="text-primary">Sobre Nosotros</Typography.H2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
-          accusamus porro. Explicabo, molestiae reprehenderit. Ex similique odit
-          dolorem aperiam praesentium modi libero perferendis. Aut ipsum ex
-          dolores aliquid voluptate minus.
-        </p>
-      </section>
+      <AboutContainer >
+        <Container className="flex justify-end">
+          <div className={`${aboutStyles['about--text']} text-white`}>
+            <Typography.H2 >Sobre Nosotros</Typography.H2>
+            <p >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
+              accusamus porro. Explicabo, molestiae reprehenderit. Ex similique odit
+              dolorem aperiam praesentium modi libero perferendis. Aut ipsum ex
+              dolores aliquid voluptate minus.
+            </p>
+          </div>
+        </Container>
+      </AboutContainer>
       <main className="">
         <h2>Nuestros Productos</h2>
 
