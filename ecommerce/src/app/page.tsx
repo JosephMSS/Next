@@ -3,6 +3,9 @@ import { Container } from "app/components/shared/container/Container";
 import Image from "next/image";
 import Link from "next/link";
 import styles from './Category.module.css'
+import { Container as CategoryContainer } from "app/components/home/category/container"
+import { Card as CategoryCard } from "app/components/home/category/card"
+import { Typography } from "app/components/shared/Typography";
 const PRODUCTS = [
   {
     image: "/img/producto1.jpg",
@@ -69,28 +72,19 @@ export default function Home() {
     <>
       <Hero />
       <section>
-        <h2 className=" text-6xl 
-          font-playfair 
-          font-bold 
-          text-center 
-          my-20
-          tracking-tighter">Categorías</h2>
+        <Typography.H2>Categorías</Typography.H2>
         <Container>
-          <div className={styles['category-container']}>
-
+          <CategoryContainer>
             {
               CATEGORIES.map((category) => (
-                <div key={category.id} className={styles['category']}>
-                  <Image src={category.image} alt={`Imagen de ${category.name}`} width={500} height={500} />
-                  <Link href="#">{category.name}</Link>
-                </div>
+                <CategoryCard image={category.image} name={category.name} key={category.id} />
               ))
             }
-          </div>
+          </CategoryContainer>
         </Container>
       </section>
       <section>
-        <h2>Sobre Nosotros</h2>
+        <Typography.H2 className="text-primary">Sobre Nosotros</Typography.H2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
           accusamus porro. Explicabo, molestiae reprehenderit. Ex similique odit
