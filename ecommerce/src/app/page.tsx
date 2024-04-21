@@ -37,27 +37,28 @@ export default function Home() {
           </div>
         </Container>
       </AboutContainer>
-      <main className="">
-        <h2>Nuestros Productos</h2>
-
-        <div>
-          {
-            PRODUCTS.map((product) => {
-              return (
-                <div key={product.name}>
-                  <Image src={product.image} alt={`Imagen de ${product.name}`} width={500} height={500} />
-                  <div>
-                    <h3>{product.name}</h3>
-                    <p>{product.description}</p>
-                    <p>${product.price}</p>
-                    <a href="#">Agregar al Carrito</a>
+      <Container>
+        <main>
+          <Typography.H2 className="text-center">Nuestros Productos</Typography.H2>
+          <div className="grid grid-cols-6">
+            {
+              PRODUCTS.map((product) => {
+                return (
+                  <div key={product.name}>
+                    <Image src={product.image} alt={`Imagen de ${product.name}`} width={500} height={500} />
+                    <div className="text-center pt-8">
+                      <h3 className="text-4xl font-bold font-playfair">{product.name}</h3>
+                      <p>{product.description}</p>
+                      <p className="text-4xl font-bold">${product.price}</p>
+                      <a href="#">Agregar al Carrito</a>
+                    </div>
                   </div>
-                </div>
-              )
-            })
-          }
-        </div>
-      </main >
+                )
+              })
+            }
+          </div>
+        </main >
+      </Container>
     </>
   );
 }
