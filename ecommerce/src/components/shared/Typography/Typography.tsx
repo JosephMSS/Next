@@ -11,7 +11,7 @@ const Typography = ({ children }: ITypographyProps) => {
 }
 type TypographyType = React.HTMLAttributes<HTMLHeadingElement> & TypographyProps;
 const H2 = (props: TypographyType) => {
-    return <h2 {...props} className={cn(props.className, "text-6xl font-playfair font-bold text-center my-20 tracking-tighter")}>{props.children}</h2>
+    return <h2 {...props} className={cn(props.className, "text-6xl font-playfair font-bold my-20 tracking-tighter")}>{props.children}</h2>
 }
 Typography.H2 = H2;
 

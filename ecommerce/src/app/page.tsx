@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <Hero />
       <section>
-        <Typography.H2>Categorías</Typography.H2>
+        <Typography.H2 className="text-center">Categorías</Typography.H2>
         <Container>
           <CategoryContainer>
             {
